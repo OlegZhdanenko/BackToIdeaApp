@@ -1,5 +1,5 @@
 {
-  "watch": ["src"],
+  "watch": ["backtoideaapp"],
   "ext": "ts,cjs,js",
-  "exec": "ts-node -r tsconfig-paths/register . ./dist/app.js"
+  "exec": "npx ts-node ./src/app.ts"
 }
