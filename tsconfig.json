@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
     "allowJs": false,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "isolatedModules": true,
     "lib": ["ES2021"],
-    "module": "CommonJS",
+    "module": "es6",
     "moduleResolution": "node",
     "baseUrl": "./src",
     "outDir": "./dist",

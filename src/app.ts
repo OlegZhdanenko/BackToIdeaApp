@@ -4,7 +4,7 @@ import express, {
   NextFunction,
   ErrorRequestHandler,
 } from "express";
-import { UserModel } from "./app/models/user_models";
+import { UserModel } from "./lib/db/models/user_models.ts";
 import cors from "cors";
 
 const app = express();
@@ -20,6 +20,21 @@ app.get("/users", async (req, res) => {
     res
       .status(500)
       .json({ message: "Ошибка при получении пользователей", error });
+  }
+});
+app.post("/users", async (req, res) => {
+  const { name, email } = req.body;
+
+  try {
+    const user = await UserModel.query().insert({
+      name,
+      email,
+    });
+    res.json(user);
+  } catch (error) {
+    res
+      .status(500)
+      .json({ message: "Ошибка при создании пользователя", error });
   }
 });
 
