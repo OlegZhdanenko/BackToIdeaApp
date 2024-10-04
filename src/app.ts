@@ -9,7 +9,7 @@ import cors from "cors";
 
 const app = express();
 app.use(cors());
-const port = 3306;
+const port = 3000;
 app.use(express.json());
 
 app.get("/users", async (req, res) => {

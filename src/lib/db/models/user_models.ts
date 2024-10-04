@@ -1,5 +1,5 @@
 import Objection, { Model, RelationMappings } from "objection";
-import { IdeaModel } from "./idea_models";
+import { IdeaModel } from "./idea_models.ts";
 
 export class UserModel extends Model {
   _id: string;
